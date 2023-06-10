@@ -1,8 +1,8 @@
-﻿using DI.Basic.Explore.Me.Interface;
+﻿using DI.Common.Explore.Me.Interface;
 
-namespace DI.Basic.Explore.Me.Implementation
+namespace DI.Common.Explore.Me.Implementation
 {
-    internal class FileLogger : ILogger
+    public class FileLogger : ILogger
     {
         public void Log(string message)
         {

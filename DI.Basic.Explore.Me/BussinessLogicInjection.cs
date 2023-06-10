@@ -1,4 +1,4 @@
-﻿using DI.Basic.Explore.Me.Interface;
+﻿using DI.Common.Explore.Me.Interface;
 
 namespace DI.Basic.Explore.Me
 {

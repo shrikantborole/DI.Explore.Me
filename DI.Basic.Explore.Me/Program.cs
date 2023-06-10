@@ -3,9 +3,34 @@ using DI.Basic.Explore.Me;
 using DI.Basic.Explore.Me.Implementation;
 
 Console.WriteLine("Hello, World!");
-Console.WriteLine("File Logger Calling - ctor Example");
-BussinessLogic bussinessLogic1 = new BussinessLogic(new FileLogger());
+
+//Ctor Injection
+Console.WriteLine("File Logger Calling - Ctor Injection Example");
+BussinessLogicCtorInjection bussinessLogic1 = new BussinessLogicCtorInjection(new FileLogger());
 bussinessLogic1.Calculate();
-Console.WriteLine("Console Logger Calling - ctor Example");
-BussinessLogic bussinessLogic2 = new BussinessLogic(new ConsoleLogger());
+
+Console.WriteLine("Console Logger Calling - Ctor Injection Example");
+BussinessLogicCtorInjection bussinessLogic2 = new BussinessLogicCtorInjection(new ConsoleLogger());
 bussinessLogic2.Calculate();
+
+
+//Property Injection
+Console.WriteLine("File Logger Calling - Property Example");
+BussinessLogicPropertyInjection bussinessLogicPropertyInjection = new BussinessLogicPropertyInjection();
+bussinessLogicPropertyInjection.LoggerInstance = new ConsoleLogger();
+bussinessLogicPropertyInjection.Calculate();
+
+Console.WriteLine("File Logger Calling - Property Example");
+BussinessLogicPropertyInjection bussinessLogicPropertyInjection2 = new BussinessLogicPropertyInjection();
+bussinessLogicPropertyInjection2.LoggerInstance = new FileLogger();
+bussinessLogicPropertyInjection2.Calculate();
+
+
+//Method Injection
+Console.WriteLine("File Logger Calling - Method Example");
+BussinessLogicMethodInjection bussinessLogicMethodInjection = new BussinessLogicMethodInjection();
+bussinessLogicMethodInjection.Calculate(new ConsoleLogger());
+
+Console.WriteLine("File Logger Calling - Method Example");
+BussinessLogicMethodInjection bussinessLogicMethodInjection2 = new BussinessLogicMethodInjection();
+bussinessLogicMethodInjection2.Calculate(new FileLogger());

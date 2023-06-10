@@ -6,11 +6,11 @@ Console.WriteLine("Hello, World!");
 
 //Ctor Injection
 Console.WriteLine("File Logger Calling - Ctor Injection Example");
-BussinessLogicCtorInjection bussinessLogic1 = new BussinessLogicCtorInjection(new FileLogger());
+BussinessLogicInjection bussinessLogic1 = new BussinessLogicInjection(new FileLogger());
 bussinessLogic1.Calculate();
 
 Console.WriteLine("Console Logger Calling - Ctor Injection Example");
-BussinessLogicCtorInjection bussinessLogic2 = new BussinessLogicCtorInjection(new ConsoleLogger());
+BussinessLogicInjection bussinessLogic2 = new BussinessLogicInjection(new ConsoleLogger());
 bussinessLogic2.Calculate();
 
 

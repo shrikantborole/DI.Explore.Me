@@ -2,10 +2,10 @@
 
 namespace DI.Basic.Explore.Me
 {
-    public class BussinessLogicCtorInjection
+    public class BussinessLogicInjection
     {
         private readonly ILogger _logger;
-        public BussinessLogicCtorInjection(ILogger logger)
+        public BussinessLogicInjection(ILogger logger)
         {
             _logger = logger;
         }

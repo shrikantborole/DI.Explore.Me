@@ -26,7 +26,7 @@ namespace DI.Basic.Explore.Me
 
     class BussinessLogicPropertyInjection
     {
-        private ILogger _logger;
+        private ILogger? _logger;
         public ILogger LoggerInstance
         {
             private get
@@ -41,7 +41,7 @@ namespace DI.Basic.Explore.Me
 
         public void Calculate()
         {
-            _logger.Log($"BussinessLogicPropertyInjection: - {this.GetType().FullName}");
+            LoggerInstance.Log($"BussinessLogicPropertyInjection: - {this.GetType().FullName}");
         }
     }
 }

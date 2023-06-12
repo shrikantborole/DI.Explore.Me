@@ -1,6 +1,6 @@
 ﻿using DI.Common.Explore.Me.Interface;
 
-namespace DI.Common.Explore.Me.Implementation
+namespace DI.Common.Explore.Me.Implementation.Logger
 {
     public class FileLogger : ILogger
     {

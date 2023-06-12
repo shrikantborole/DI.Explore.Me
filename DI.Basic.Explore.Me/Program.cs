@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using DI.Basic.Explore.Me;
-using DI.Common.Explore.Me.Implementation;
+using DI.Common.Explore.Me.Implementation.Logger;
 
 Console.WriteLine("Hello, World!");
 

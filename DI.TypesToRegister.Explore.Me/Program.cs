@@ -15,12 +15,20 @@ using var host = Host.CreateDefaultBuilder(args)
     })
     .ConfigureServices((context, services) =>
     {
+        //How to register Generic type
         services.AddTransient(typeof(IReport<>), typeof(CSVReport<>));
+
+        //How to register normal class
         //services.AddTransient<ILogger, FileLogger>();
+        //services.TryAddTransient<ILogger, ConsoleLogger>();
+
+        //Register Single Class
         services.AddTransient<BussinessLogic>();
 
+        //Register a class with ctor, ISQLLoggerFactory is wrapper class around it. 
         services.AddTransient<ISQLLoggerFactory, SQLLoggerFactory>();
 
+        //AB Testing, based on the key in the appSetting, the dependency is injected.
         services.AddTransient<FileLogger>();
         services.AddTransient<ConsoleLogger>();
         services.AddTransient<ILogger>((serviceProvider) =>
@@ -33,8 +41,7 @@ using var host = Host.CreateDefaultBuilder(args)
             return serviceProvider.GetRequiredService<ConsoleLogger>();
         });
 
-        //services.TryAddTransient<ILogger, ConsoleLogger>();
-
+        //Mapping of the appSetting to the model
         services.AddOptions<LoggerConfiguration>()
         .Configure<IConfiguration>((options, config) =>
         {

@@ -1,4 +1,4 @@
-﻿namespace DI.LifeTime.Explore.Me.Interface
+﻿namespace DI.Common.Explore.Me.Interface
 {
     public interface IProductImporter
     {

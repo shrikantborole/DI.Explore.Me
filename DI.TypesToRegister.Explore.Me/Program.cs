@@ -6,7 +6,6 @@ using DI.TypesToRegister.Explore.Me;
 using DI.TypesToRegister.Explore.Me.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 
 using var host = Host.CreateDefaultBuilder(args)

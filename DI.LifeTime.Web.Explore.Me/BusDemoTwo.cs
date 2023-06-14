@@ -1,21 +1,22 @@
 ﻿using DI.Common.Explore.Me.Interface;
 
-namespace DI.LifeTime.Explore.Me.Implementation
+namespace LifeTime.Explore.Me
 {
-    internal class ProductImporter : IProductImporter
+    public interface IBusDemoTwo
+    {
+        public void Run();
+    }
+    public class BusDemoTwo : IBusDemoTwo
     {
         private readonly ILifeTimeExample _lifeTimeExample;
-
-        public ProductImporter(ILifeTimeExample lifeTimeExample)
+        public BusDemoTwo(ILifeTimeExample lifeTimeExample)
         {
             _lifeTimeExample = lifeTimeExample;
         }
-        public void Import()
+
+        public void Run()
         {
             _lifeTimeExample.IncrementByOne();
-        }
-        public void OutPut()
-        {
             _lifeTimeExample.OutPut();
         }
     }

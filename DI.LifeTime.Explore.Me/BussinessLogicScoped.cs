@@ -1,4 +1,4 @@
-﻿using DI.LifeTime.Explore.Me.Interface;
+﻿using DI.Common.Explore.Me.Interface;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace DI.LifeTime.Explore.Me

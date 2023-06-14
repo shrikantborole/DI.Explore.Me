@@ -1,4 +1,4 @@
-﻿using DI.LifeTime.Explore.Me.Interface;
+﻿using DI.Common.Explore.Me.Interface;
 
 namespace DI.LifeTime.Explore.Me.Implementation
 {

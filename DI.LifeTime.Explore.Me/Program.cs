@@ -1,6 +1,7 @@
-﻿using DI.LifeTime.Explore.Me;
+﻿using DI.Common.Explore.Me.Implementation;
+using DI.Common.Explore.Me.Interface;
+using DI.LifeTime.Explore.Me;
 using DI.LifeTime.Explore.Me.Implementation;
-using DI.LifeTime.Explore.Me.Interface;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 

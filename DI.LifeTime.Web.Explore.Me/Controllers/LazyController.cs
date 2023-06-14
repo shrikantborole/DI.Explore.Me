@@ -18,6 +18,11 @@ namespace DI.LifeTime.Web.Explore.Me.Controllers
         [HttpGet(Name = "lazyLoadingDemo")]
         public IActionResult Get()
         {
+            for (int i = 0; i < 4; i++)
+            {
+                Thread.Sleep(1000); 
+                Console.WriteLine($"Sleeping Therad for {i}");
+            }
             _lazyloading.Value.Run();
             return Ok();
         }

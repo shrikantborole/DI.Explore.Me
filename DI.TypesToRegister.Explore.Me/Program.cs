@@ -50,5 +50,5 @@ using var host = Host.CreateDefaultBuilder(args)
     })
     .Build();
 
-var rabbitMQSartup = host.Services.GetRequiredService<BussinessLogic>();
-rabbitMQSartup.Run();
+var typesToRegister = host.Services.GetRequiredService<BussinessLogic>();
+typesToRegister.Run();

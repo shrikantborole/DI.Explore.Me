@@ -41,6 +41,12 @@ builder.Services.AddTransient<Lazy<IILazyLoading>>((serviceProvider) =>
 
 #endregion
 
+builder.Services.AddHttpClient<IHttpClientDemo, HttpClientDemo>()
+           .ConfigureHttpClient(client =>
+           {
+               client.BaseAddress = new Uri("https://jsonplaceholder.typicode.com/");
+           });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

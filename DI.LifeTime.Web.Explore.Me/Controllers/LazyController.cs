@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace DI.LifeTime.Web.Explore.Me.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]/[action]")]
     public class LazyController : ControllerBase
     {
         private readonly Lazy<IILazyLoading> _lazyloading;
